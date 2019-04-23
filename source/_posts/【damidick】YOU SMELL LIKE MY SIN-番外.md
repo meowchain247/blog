@@ -13,7 +13,7 @@ toc: true
 ---
 
 <p>现在想想真是把半辈子的黄梗都用在41上了【</p> 
-<p reblogfrom="reblogfrom"  ><a target="_blank" href="http://tundra1.lofter.com/post/20bfd7_eebb1746"  >MAR:</a></p> 
+<p reblogfrom="reblogfrom"  ><a target="_blank" href="https://tundra1.lofter.com/post/20bfd7_eebb1746"  >MAR:</a></p> 
 <blockquote> 
  <p>之前给猫太小簧本撸的小簧蚊番外////</p> 
  <p>达米安成年后的孕期play，OOC，慎入</p> 
