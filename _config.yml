@@ -1,0 +1,237 @@
+# Hexo Configuration
+## Docs: https://hexo.io/docs/configuration.html
+## Source: https://github.com/hexojs/hexo/
+
+# Site
+title: Hexo博客
+subtitle: 猫厨的博客
+description: 简短的描述
+keywords:
+author: 猫厨
+language: zh-CN
+timezone:
+
+# URL #链接格式
+#网址
+## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
+url: https://meowchain247.github.io
+root: / #根目录
+permalink: post/:category/:year/:month/:day/:title/ #文章的链接格式，默认为:year/:month/:day/:title/, :category/:title/
+permalink_defaults:
+
+# Directory #目录
+source_dir: source #源文件目录
+public_dir: public #生成的网页文件目录
+tag_dir: tags #标签目录
+archive_dir: archives #存档目录
+category_dir: categories #分类目录
+code_dir: downloads/code #Include code 文件夹
+i18n_dir: :lang #国际化（i18n）文件夹
+skip_render: #跳过指定文件的渲染，您可使用 glob 表达式来匹配路径。
+
+# 文章Writing
+new_post_name: :title.md #新文章的文件名称
+default_layout: post #默认的模板，包括 post、page、photo、draft（文章、页面、照片、草稿）
+titlecase: false #标题转换成大写
+external_link: true #在新选项卡中打开连接
+filename_case: 1 #0，把文件名称转换为 (1) 小写或 (2) 大写
+render_drafts: false #显示草稿
+post_asset_folder: false #启动 Asset 文件夹
+relative_link: false #把链接改为与根目录的相对位址
+future: true #显示未来的文章
+highlight: #语法高亮
+  enable: true #是否启用
+  line_number: true #显示行号
+  auto_detect: false
+  tab_replace:
+  
+# Home page setting
+# path: Root path for your blogs index page. (default = '')
+# per_page: Posts displayed per page. (0 = disable pagination)
+# order_by: Posts order. (Order by date descending by default)
+index_generator:
+  path: ''
+  per_page: 20
+  order_by: -date
+
+archive_generator:
+  per_page: 1000
+  yearly: true
+  monthly: true
+
+tag_generator:
+  per_page: 50
+  
+# Category & Tag
+default_category: uncategorized
+category_map:
+tag_map:
+
+# Date / Time format
+## Hexo uses Moment.js to parse and display date
+## You can customize the date format as defined in
+## http://momentjs.com/docs/#/displaying/format/
+date_format: YYYY-MM-DD
+time_format: HH:mm:ss
+
+# Pagination
+## Set per_page to 0 to disable pagination
+per_page: 10
+pagination_dir: page
+
+# Extensions
+## Plugins: https://hexo.io/plugins/
+#RSS订阅
+plugin:
+- hexo-generator-feed
+#Feed Atom
+feed:
+  type: atom
+  path: atom.xml
+  limit: 20
+  hub:
+  content:
+  content_limit: 140
+  content_limit_delim: ' '
+
+## Themes: https://hexo.io/themes/
+theme: hexo-theme-next
+
+# Security
+##
+encrypt:
+  enable: true
+
+symbols_count_time:
+  symbols: true
+  time: true
+  total_symbols: true
+  total_time: true
+
+search:
+  path: search.xml
+  field: all #post, page
+  format: html
+  limit: 10000
+
+filter_optimize:
+  enable: false
+  # remove static resource query string
+  #   - like `?v=1.0.0`
+  remove_query_string: true
+  # remove the surrounding comments in each of the bundled compressed_files
+  remove_comments: false
+  css:
+    enable: true
+    # bundle loaded css file into the one
+    bundle: true
+    # use a script block to load css elements dynamically
+    delivery: true
+    # make specific css content inline into the html page
+    #   - only support the full path
+    #   - default is ['css/main.css']
+    inlines:
+    excludes:
+  js:
+    # bundle loaded js file into the one
+    bundle: true
+    excludes:
+  # set the priority of this plugin,
+  # lower means it will be executed first, default is 10
+  priority: 12
+
+# Generate categories from directory-tree
+# Dependencies: https://github.com/xu-song/hexo-auto-category
+# depth: the depth of directory-tree you want to generate, should > 0
+auto_category:
+ enable: false
+ depth: 
+
+sitemap:
+  path: sitemap.xml
+
+pwa:
+  manifest:
+    path: /manifest.json
+    body:
+      name: hexo
+      short_name: hexo
+      icons:
+        - src: /images/android-chrome-192x192.png
+          sizes: 192x192
+          type: image/png
+  serviceWorker:
+    path: /sw.js
+    preload:
+      urls:
+        - /
+      posts: 5
+    opts:
+      networkTimeoutSeconds: 5
+    routes:
+      - pattern: !!js/regexp /hm.baidu.com/
+        strategy: networkOnly
+      - pattern: !!js/regexp /.*\.(js|css|jpg|jpeg|png|gif)$/
+        strategy: cacheFirst
+      - pattern: !!js/regexp /\//
+        strategy: networkFirst
+  priority: 5
+
+#math:
+#  engine: 'mathjax' # or 'katex'
+#  mathjax:
+#    src: custom_mathjax_source
+#    config:
+#      # MathJax config
+#  katex:
+#    css: custom_css_source
+#    js: custom_js_source # not used
+#    config:
+#      # KaTeX config
+
+sequence:
+  # webfont:     # optional, the source url of webfontloader.js
+  # snap:        # optional, the source url of snap.svg.js
+  # underscore:  # optional, the source url of underscore.js
+  # sequence:    # optional, the source url of sequence-diagram.js
+  # css: # optional, the url for css, such as hand drawn theme
+  options:
+    theme:
+    css_class:
+
+flowchart:
+  # raphael:   # optional, the source url of raphael.js
+  # flowchart: # optional, the source url of flowchart.js
+  options: # options used for `drawSVG`
+
+# 开启字数统计
+word_count: true
+
+# 关闭字数统计
+# word_count: false
+
+live2d:
+  enable: false
+  scriptFrom: local
+  model:
+    use: live2d-widget-model-wanko
+  display:
+    position: right
+    width: 150
+    height: 300
+  mobile:
+    show: true
+
+# mermaid chart
+mermaid: ## mermaid url https://github.com/knsv/mermaid
+  enable: true  # default true
+  version: "7.1.2" # default v7.1.2
+  options:  # find more api options from https://github.com/knsv/mermaid/blob/master/src/mermaidAPI.js
+    #startOnload: true  // default true
+
+# Deployment #部署
+## Docs: https://hexo.io/docs/deployment.html
+deploy:
+  type: git
+  repo:
+    github:  https://github.com/meowchain247/meowchain247.github.io.git,master
