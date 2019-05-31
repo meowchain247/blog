@@ -10,8 +10,6 @@ author: "猫厨"
 description: ""
 toc: true
 ---
-
-<p>GGAD</p> 
 ![](https://raw.githubusercontent.com/alicewish/meowchain247/master/chuxue.jpg)
 
 
