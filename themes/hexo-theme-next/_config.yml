@@ -93,8 +93,8 @@ footer:
 # Valid values of language: deed.zh, deed.fr, deed.de, etc.
 creative_commons:
   license: by-nc-sa
-  sidebar: false
-  post: false
+  sidebar: true
+  post: true
   language:
 
 # `Follow me on GitHub` banner in the top-right corner.
@@ -427,7 +427,7 @@ tagcloud:
   max: 30 # max font size in px
   start: "#ccc" # start color (hex, rgba, hsla or color keywords)
   end: "#111" # end color (hex, rgba, hsla or color keywords)
-  amount: 200 # amount of tags, chage it if you have more than 200 tags
+  amount: 2000 # amount of tags, change it if you have more than 200 tags
 
 
 # ---------------------------------------------------------------
@@ -499,14 +499,14 @@ math:
   enable: true
 
   # Default (true) will load mathjax / katex script on demand.
-  # That is it only render those page which has `mathjax: true` in Front Matter.
+  # That is it only render those page which has `mathjax: true` in Front-matter.
   # If you set it to false, it will load mathjax / katex srcipt EVERY PAGE.
   per_page: true
 
   engine: mathjax
   #engine: katex
 
-  # hexo-rendering-pandoc (or hexo-renderer-kramed) needed to full MathJax support.
+  # hexo-renderer-pandoc (or hexo-renderer-kramed) needed to full MathJax support.
   mathjax:
     cdn: //cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML
     #cdn: //cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML
@@ -542,7 +542,7 @@ quicklink:
   enable: true
 
   # Quicklink (quicklink.umd.js script) is loaded on demand
-  # Add `quicklink: true` in Front Matter of the page or post you need
+  # Add `quicklink: true` in Front-matter of the page or post you need
   # Home page and archive page can be controlled through home and archive options below
   home: true
   archive: true
